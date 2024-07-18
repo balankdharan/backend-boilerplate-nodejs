@@ -1,7 +1,9 @@
 const app = require("./app");
 const dotenv = require("dotenv");
-
+const cronJob = require("./cronjob/cronjob");
 dotenv.config();
+
+cronJob.startJob();
 
 const PORT = process.env.PORT || 3000;
 
